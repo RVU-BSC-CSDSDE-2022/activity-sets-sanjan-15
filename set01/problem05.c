@@ -1,35 +1,34 @@
 #include <stdio.h>
-int input();
-int find_sum(int n);
-void output(int n, int sum);
-
 int input()
 {
   int n;
   scanf("%d",&n);
   return n;
 }
-
-int find_sum(int n)
+int compare(int a,int b,int c)
 {
-  int sum = 0;
-  for(int i=1;i<=n;i++)
-    sum += i;
-  return sum;
-  }
-
-void output(int n, int sum)
+  if(a<b)
+     a=b;
+  if(a<c)
+     a=c;
+  return a;
+}
+void output(int a, int b,int c,int largest)
 {
-  printf("The sun number from 1 to %d is %d\n",n,sum);
-  }
-
+  printf("The largest no. is %d",largest);
+}
 int main()
 {
-  int n;
-  n=input();
-  int sum = find_sum(n);
-  output(n,sum);
+  int a,b,c,largest;
+  printf("Enter 1st no. ");
+  a=input();
+  printf("Enter 2nd no. ");
+  b = input();
+  printf("Enter 3rd no. ");
+  c = input();
+  largest = compare(a,b,c);
+  output(a,b,c,largest);
   return 0;
-  }
+}
 
 

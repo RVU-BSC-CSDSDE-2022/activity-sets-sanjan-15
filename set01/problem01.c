@@ -2,6 +2,9 @@
 #include <stdio.h>
 int main()
 {
-  printf("My name is Srinivasan\n");
+  char name[20];
+  printf("Enter your name\n");
+  scanf("%[^\n]s",&name);
+  printf("Your name is %s",name);
   return 0;
 }
